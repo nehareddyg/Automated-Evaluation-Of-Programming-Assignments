@@ -1,0 +1,66 @@
+digraph G {
+  rankdir=TB;
+  node [style=filled];
+  2 [shape=box, fillcolor="#FFEFD5", label="Decl arr"];
+  3 [shape=box, fillcolor="#6495ED", label="In1"];
+  4 [shape=box, fillcolor="#FFEFD5", label="Decl n"];
+  5 [shape=box, fillcolor="#6495ED", label="In2"];
+  6 [shape=box, fillcolor="#FFEFD5", label="Decl sum_0"];
+  7 [shape=box, fillcolor="#FFEFD5", label="Decl i"];
+  8 [shape=box, fillcolor="#CCCCCC", label="sum_0 = 0;"];
+  9 [shape=box, fillcolor="#CCCCCC", label="i = 0;"];
+  10 [shape=doublecircle, fillcolor="#CCCCCC", label="while"];
+  11 [shape=diamond, fillcolor="#CCCCCC", label="i <= n"];
+  12 [shape=box, fillcolor="#CCCCCC", label="sum_0 += *(arr + i);"];
+  13 [shape=box, fillcolor="#CCCCCC", label="i ++;"];
+  14 [shape=doublecircle, fillcolor="#CCCCCC", label="break;"];
+  15 [shape=box, fillcolor="#CCCCCC", label="return sum_0;"];
+  16 [shape=box, fillcolor="#90EE90", label="OutRet"];
+  17 [shape=box, fillcolor="#6495ED", label="In(S_arr[0..1])"];
+  
+  
+  edge [dir=back];
+  3 -> 2 [style=dotted, color="#000000"];
+  2 -> 3 [style=dotted, color="#000000"];
+  5 -> 4 [style=dotted, color="#000000"];
+  4 -> 5 [style=dotted, color="#000000"];
+  6 -> 8 [style=dotted, color="#000000"];
+  7 -> 9 [style=dotted, color="#000000"];
+  10 -> 10 [arrowtail=odot, color="#000000"];
+  11 -> 10 [arrowtail=odot, color="#000000"];
+  14 -> 10 [arrowtail=odot, color="#000000"];
+  4 -> 11 [color="#0000FF"];
+  5 -> 11 [color="#0000FF"];
+  7 -> 11 [color="#0000FF"];
+  9 -> 11 [color="#0000FF"];
+  10 -> 11 [arrowtail=odot, color="#000000"];
+  11 -> 11 [arrowtail=odot, color="#000000"];
+  13 -> 11 [color="#0000FF"];
+  14 -> 11 [arrowtail=odot, color="#000000"];
+  2 -> 12 [color="#0000FF"];
+  3 -> 12 [color="#0000FF"];
+  6 -> 12 [style=dotted, color="#0000FF"];
+  7 -> 12 [color="#0000FF"];
+  8 -> 12 [color="#0000FF"];
+  9 -> 12 [color="#0000FF"];
+  10 -> 12 [arrowtail=odot, color="#000000"];
+  11 -> 12 [arrowtail=odot, color="#000000"];
+  12 -> 12 [color="#0000FF"];
+  13 -> 12 [color="#0000FF"];
+  14 -> 12 [arrowtail=odot, color="#000000"];
+  17 -> 12 [color="#0000FF"];
+  7 -> 13 [style=dotted, color="#0000FF"];
+  9 -> 13 [color="#0000FF"];
+  10 -> 13 [arrowtail=odot, color="#000000"];
+  11 -> 13 [arrowtail=odot, color="#000000"];
+  13 -> 13 [color="#0000FF"];
+  14 -> 13 [arrowtail=odot, color="#000000"];
+  10 -> 14 [arrowtail=odot, color="#000000"];
+  11 -> 14 [arrowtail=odot, color="#000000"];
+  14 -> 14 [arrowtail=odot, color="#000000"];
+  6 -> 15 [color="#0000FF"];
+  8 -> 15 [color="#0000FF"];
+  12 -> 15 [color="#0000FF"];
+  15 -> 16 [color="#0000FF"];
+  
+  }

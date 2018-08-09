@@ -1,0 +1,49 @@
+digraph G {
+  rankdir=TB;
+  node [style=filled];
+  2 [shape=box, fillcolor="#FFEFD5", label="Decl arr"];
+  3 [shape=box, fillcolor="#6495ED", label="In1"];
+  4 [shape=box, fillcolor="#FFEFD5", label="Decl n"];
+  5 [shape=box, fillcolor="#6495ED", label="In2"];
+  6 [shape=box, fillcolor="#FFEFD5", label="Decl sum_0"];
+  7 [shape=box, fillcolor="#FFEFD5", label="Decl i"];
+  8 [shape=box, fillcolor="#CCCCCC", label="i = 0;"];
+  9 [shape=doublecircle, fillcolor="#CCCCCC", label="while"];
+  10 [shape=diamond, fillcolor="#CCCCCC", label="i < n"];
+  11 [shape=box, fillcolor="#CCCCCC", label="sum_0 += *(arr + i);"];
+  12 [shape=doublecircle, fillcolor="#CCCCCC", label="break;"];
+  13 [shape=box, fillcolor="#CCCCCC", label="return sum_0;"];
+  14 [shape=box, fillcolor="#90EE90", label="OutRet"];
+  15 [shape=box, fillcolor="#6495ED", label="In(sum_0)"];
+  16 [shape=box, fillcolor="#6495ED", label="In(S_arr[0])"];
+  
+  
+  edge [dir=back];
+  3 -> 2 [style=dotted, color="#000000"];
+  2 -> 3 [style=dotted, color="#000000"];
+  5 -> 4 [style=dotted, color="#000000"];
+  4 -> 5 [style=dotted, color="#000000"];
+  7 -> 8 [style=dotted, color="#000000"];
+  10 -> 9 [arrowtail=odot, color="#000000"];
+  12 -> 9 [arrowtail=odot, color="#000000"];
+  4 -> 10 [color="#0000FF"];
+  5 -> 10 [color="#0000FF"];
+  7 -> 10 [color="#0000FF"];
+  8 -> 10 [color="#0000FF"];
+  10 -> 10 [arrowtail=odot, color="#000000"];
+  12 -> 10 [arrowtail=odot, color="#000000"];
+  2 -> 11 [color="#0000FF"];
+  3 -> 11 [color="#0000FF"];
+  6 -> 11 [style=dotted, color="#0000FF"];
+  7 -> 11 [color="#0000FF"];
+  8 -> 11 [color="#0000FF"];
+  10 -> 11 [arrowtail=odot, color="#000000"];
+  12 -> 11 [arrowtail=odot, color="#000000"];
+  15 -> 11 [color="#0000FF"];
+  16 -> 11 [color="#0000FF"];
+  10 -> 12 [arrowtail=odot, color="#000000"];
+  12 -> 12 [arrowtail=odot, color="#000000"];
+  6 -> 13 [color="#0000FF"];
+  13 -> 14 [color="#0000FF"];
+  
+  }
