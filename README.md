@@ -38,7 +38,7 @@ Our work is motivated by [GPLAG paper](http://dx.doi.org/10.1145/1150402.1150522
 
 
 
-Please find the code files in the directory "code/gamma-isomorphism/"
+Refer to the file [report.pdf](https://github.com/nehareddyg/Automated-Evaluation-Of-Programming-Assignments/blob/master/report.pdf) for more details. Please find the code files in the directory "code/gamma-isomorphism/"
 
 Contributors:
 Neha Gaddam(nehareddyg),
